@@ -60,3 +60,4 @@ When deploying to Netlify or GitHub Pages, add the following security headers vi
 
 ---
 *Security audit completed for CYVEXA Level 1 Internship.*
+
