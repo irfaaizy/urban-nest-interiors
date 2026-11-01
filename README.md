@@ -9,6 +9,8 @@
 ---
 
 ## 🌟 Live Demo & Deployment
+* **GitHub Repository:** [https://github.com/irfaaizy/urban-nest-interiors](https://github.com/irfaaizy/urban-nest-interiors)
+* **Live GitHub Pages URL:** [https://irfaaizy.github.io/urban-nest-interiors/](https://irfaaizy.github.io/urban-nest-interiors/)
 * **Local Preview:** Run any static server (e.g. `npx serve .` or `python -m http.server 8000`)
 * **Deploy-Ready Platforms:** Netlify, GitHub Pages, Vercel, Cloudflare Pages
 * **Live Deployment Guide:** See [Deployment Instructions](#-deployment-instructions) below.
