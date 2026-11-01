@@ -14,6 +14,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavigation();
   initHeaderScroll();
   initTestimonialCarousel();
@@ -23,6 +24,47 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initWeatherWidget();
 });
+
+/**
+ * 0. Theme Switcher: Aurora Lively vs. Classic Earth
+ */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggle');
+  const storedTheme = localStorage.getItem('urbannest-theme') || 'aurora';
+
+  function applyTheme(theme) {
+    if (theme === 'aurora') {
+      document.documentElement.setAttribute('data-theme', 'aurora');
+      if (toggleBtn) {
+        toggleBtn.innerHTML = `
+          <span class="theme-toggle-icon" aria-hidden="true">🌌</span>
+          <span class="theme-toggle-label">Aurora Lively</span>
+        `;
+        toggleBtn.setAttribute('title', 'Switch to Classic Studio theme');
+      }
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (toggleBtn) {
+        toggleBtn.innerHTML = `
+          <span class="theme-toggle-icon" aria-hidden="true">🌿</span>
+          <span class="theme-toggle-label">Classic Earth</span>
+        `;
+        toggleBtn.setAttribute('title', 'Switch to Aurora Lively theme');
+      }
+    }
+    localStorage.setItem('urbannest-theme', theme);
+  }
+
+  // Apply initially
+  applyTheme(storedTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      applyTheme(current === 'aurora' ? 'classic' : 'aurora');
+    });
+  }
+}
 
 /* ==========================================================================
    1. Responsive Navigation & Mobile Drawer
@@ -540,3 +582,4 @@ function escapeHTML(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
+

@@ -24,6 +24,14 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Instant Theme Initializer -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('urbannest-theme') || 'aurora';
+      if (t === 'aurora') document.documentElement.setAttribute('data-theme', 'aurora');
+    })();
+  </script>
 </head>
 <body>
   <!-- Accessible Skip Navigation Link -->
@@ -53,7 +61,11 @@
           <li><a href="services.html" class="nav-link">Services</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-cta">
+        <div class="nav-cta" style="display: flex; align-items: center; gap: 0.85rem;">
+          <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Aurora Lively Theme">
+            <span class="theme-toggle-icon" aria-hidden="true">🌌</span>
+            <span class="theme-toggle-label">Aurora Lively</span>
+          </button>
           <a href="contact.html" class="btn btn-accent btn-sm">Book Consultation</a>
         </div>
       </nav>
@@ -430,3 +442,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
