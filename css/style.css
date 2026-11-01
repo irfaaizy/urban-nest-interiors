@@ -302,15 +302,28 @@ main {
 }
 
 .logo-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(47, 93, 80, 0.18);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 14px rgba(233, 196, 106, 0.35);
 }
 
 .logo-img {
-  height: 46px;
+  height: 44px;
   width: auto;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), filter var(--transition-base);
 }
 
 .logo-link:hover .logo-img {
@@ -2178,20 +2191,134 @@ textarea.form-control {
   color: #F1F5F9;
 }
 
-/* Top site header in Aurora mode */
+/* Top site header with glowing Aurora outline stream in Aurora mode */
 [data-theme="aurora"] .site-header {
-  background-color: rgba(7, 11, 20, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  background-color: rgba(7, 11, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1.5px solid transparent;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 245, 160, 0.15);
 }
 
 [data-theme="aurora"] .site-header.scrolled {
-  background-color: rgba(7, 11, 20, 0.95);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 245, 160, 0.15);
+  background-color: rgba(7, 11, 20, 0.96);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 245, 160, 0.25);
+}
+
+/* Glowing Aurora outline stream on the navbar bottom matching the background */
+[data-theme="aurora"] .site-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #00F5A0 20%, 
+    #06B6D4 45%, 
+    #E056FD 70%, 
+    #FBBF24 88%, 
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: navbarAuroraStream 7s linear infinite;
+  box-shadow: 
+    0 0 12px rgba(0, 245, 160, 0.85),
+    0 0 25px rgba(224, 86, 253, 0.65),
+    0 0 35px rgba(6, 182, 212, 0.4);
+  pointer-events: none;
+}
+
+@keyframes navbarAuroraStream {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Glowing Aurora outline on UrbanNest Interiors brand badge */
+[data-theme="aurora"] .logo-link {
+  background: rgba(13, 20, 36, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-md);
+  position: relative;
+  border: 1.5px solid rgba(0, 245, 160, 0.6);
+  box-shadow: 
+    0 0 16px rgba(0, 245, 160, 0.45),
+    0 0 32px rgba(224, 86, 253, 0.3),
+    inset 0 0 14px rgba(0, 245, 160, 0.15);
+  animation: logoAuroraOutlineGlow 4.5s infinite alternate ease-in-out;
+}
+
+/* Rotating ambient neon aura behind the logo */
+[data-theme="aurora"] .logo-link::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-md) + 2px);
+  background: linear-gradient(135deg, 
+    #00F5A0 0%, 
+    #06B6D4 25%, 
+    #E056FD 60%, 
+    #FBBF24 90%, 
+    #00F5A0 100%);
+  background-size: 300% 300%;
+  animation: auroraBorderRotate 6s linear infinite;
+  z-index: -1;
+  opacity: 0.85;
+  filter: blur(4px);
+}
+
+@keyframes logoAuroraOutlineGlow {
+  0% {
+    border-color: rgba(0, 245, 160, 0.85);
+    box-shadow: 
+      0 0 16px rgba(0, 245, 160, 0.6),
+      0 0 32px rgba(6, 182, 212, 0.4),
+      inset 0 0 12px rgba(0, 245, 160, 0.25);
+  }
+  50% {
+    border-color: rgba(224, 86, 253, 0.9);
+    box-shadow: 
+      0 0 20px rgba(224, 86, 253, 0.65),
+      0 0 38px rgba(244, 63, 94, 0.45),
+      inset 0 0 14px rgba(224, 86, 253, 0.25);
+  }
+  100% {
+    border-color: rgba(251, 191, 36, 0.85);
+    box-shadow: 
+      0 0 18px rgba(251, 191, 36, 0.55),
+      0 0 35px rgba(0, 245, 160, 0.45),
+      inset 0 0 12px rgba(251, 191, 36, 0.2);
+  }
+}
+
+@keyframes auroraBorderRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+[data-theme="aurora"] .logo-link:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 
+    0 0 25px rgba(0, 245, 160, 0.85),
+    0 0 50px rgba(224, 86, 253, 0.65),
+    inset 0 0 20px rgba(0, 245, 160, 0.4);
 }
 
 [data-theme="aurora"] .logo-img {
-  filter: drop-shadow(0 0 8px rgba(0, 245, 160, 0.5));
+  filter: brightness(0) invert(1) 
+          drop-shadow(0 0 4px rgba(0, 245, 160, 0.9)) 
+          drop-shadow(0 0 12px rgba(224, 86, 253, 0.7));
+}
+
+[data-theme="aurora"] .logo-link:hover .logo-img {
+  filter: brightness(0) invert(1) 
+          drop-shadow(0 0 8px rgba(0, 245, 160, 1)) 
+          drop-shadow(0 0 20px rgba(224, 86, 253, 0.9));
 }
 
 [data-theme="aurora"] .nav-link {
