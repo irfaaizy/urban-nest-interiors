@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Book Consultation — UrbanNest Interiors Chennai</title>
+  <meta name="description" content="Get in touch with UrbanNest Interiors in Anna Nagar, Chennai. Book a free 30-minute design consultation, check live weather for site visits, or call +91 90000 00000.">
+  <meta name="keywords" content="contact interior designer Chennai, book interior consultation, Anna Nagar interior studio, interior quote Chennai">
+  <meta name="author" content="UrbanNest Interiors">
+  
+  <meta property="og:title" content="Contact UrbanNest Interiors — Request a Free Consultation">
+  <meta property="og:description" content="Talk to our lead architects and engineers. Schedule a site measurement or studio visit in Anna Nagar, Chennai.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header Landmark -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" aria-label="UrbanNest Interiors - Return to Homepage">
+        <img src="images/logo.svg" alt="UrbanNest Interiors Logo" class="logo-img" width="180" height="45">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-icon" aria-hidden="true">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-accent btn-sm">Book Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="navOverlay" tabindex="-1" aria-hidden="true"></div>
+
+  <main id="main-content">
+    <!-- Contact Header -->
+    <section class="section section-cream" aria-labelledby="contact-hero-heading" style="padding-bottom: 2rem;">
+      <div class="container" style="text-align: center;">
+        <span class="section-badge">Let's Connect</span>
+        <h1 id="contact-hero-heading" class="section-title">Book Your Free Design Consultation</h1>
+        <p class="section-subtitle" style="max-width: 680px; margin: 0 auto;">
+          Whether you have an architectural floor plan ready or are just exploring kitchen concepts, we’re here to help you build spaces you love.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact & Form Section -->
+    <section class="section section-light" aria-labelledby="form-section-heading" style="padding-top: 2rem;">
+      <div class="container">
+        <h2 id="form-section-heading" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0);">Consultation Request Form &amp; Location Details</h2>
+
+        <div class="contact-layout-grid">
+          <!-- Left Column: Form -->
+          <div class="contact-card">
+            <!-- Accessible Success Notification Banner -->
+            <div id="formSuccessBanner" class="form-success-banner" role="status" aria-live="polite"></div>
+
+            <form id="consultationForm" novalidate aria-label="Interior Design Consultation Enquiry Form">
+              <!-- Field 1: Full Name -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">
+                  Full Name <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  class="form-control" 
+                  placeholder="e.g. Anandha Krishnan" 
+                  required 
+                  minlength="3"
+                  autocomplete="name"
+                  aria-describedby="fullNameError"
+                >
+                <div id="fullNameError" class="invalid-feedback" role="alert"></div>
+              </div>
+
+              <!-- Field 2: Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email Address <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="e.g. anand@example.com" 
+                  required 
+                  autocomplete="email"
+                  aria-describedby="emailError"
+                >
+                <div id="emailError" class="invalid-feedback" role="alert"></div>
+              </div>
+
+              <!-- Field 3: Phone -->
+              <div class="form-group">
+                <label for="phone" class="form-label">
+                  Mobile Number <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-control" 
+                  placeholder="10-digit number e.g. 9840012345" 
+                  required 
+                  maxlength="10"
+                  autocomplete="tel"
+                  aria-describedby="phoneError"
+                >
+                <div id="phoneError" class="invalid-feedback" role="alert"></div>
+              </div>
+
+              <!-- Field 4: Service Interested In -->
+              <div class="form-group">
+                <label for="serviceInterested" class="form-label">
+                  Service Interested In <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <select id="serviceInterested" name="serviceInterested" class="form-control" required aria-describedby="serviceError">
+                  <option value="" disabled selected>Select an interior service...</option>
+                  <option value="full-home">Full Home Interiors (1BHK / 2BHK / 3BHK / Villa)</option>
+                  <option value="modular-kitchen">Modular Kitchen</option>
+                  <option value="living-bedroom">Living &amp; Bedroom Design</option>
+                  <option value="office-interiors">Office Interiors &amp; Workstations</option>
+                  <option value="3d-design">3D Design &amp; Visualization</option>
+                  <option value="renovation-makeover">Renovation &amp; Makeover</option>
+                </select>
+                <div id="serviceError" class="invalid-feedback" role="alert"></div>
+              </div>
+
+              <!-- Field 5: Budget Range (Optional Radio Buttons) -->
+              <div class="form-group">
+                <fieldset style="border: none; padding: 0; margin: 0;">
+                  <legend class="form-label" style="font-weight: 600;">
+                    Estimated Budget Range (Optional)
+                  </legend>
+                  <div class="radio-group-container">
+                    <label class="radio-label">
+                      <input type="radio" name="budgetRange" value="Under ₹1 lakh">
+                      <span>Under ₹1 lakh</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="budgetRange" value="₹1–5 lakh">
+                      <span>₹1–5 lakh</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="budgetRange" value="Above ₹5 lakh">
+                      <span>Above ₹5 lakh</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- Field 6: Message with Live Character Counter -->
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  Project Details / Message <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-control" 
+                  rows="4" 
+                  placeholder="Tell us about your space (e.g. 3BHK in Velachery, moving in December, looking for modular kitchen and master bedroom wardrobes)..." 
+                  required 
+                  minlength="20" 
+                  maxlength="500"
+                  aria-describedby="messageError charCounter"
+                ></textarea>
+                <div class="char-counter-wrap">
+                  <span id="messageError" class="invalid-feedback" role="alert" style="margin-top: 0;"></span>
+                  <span id="charCounter" class="char-counter" aria-live="polite">0 / 500 characters</span>
+                </div>
+              </div>
+
+              <!-- Field 7: Consent Checkbox -->
+              <div class="form-group" style="margin-top: 1.5rem;">
+                <label class="checkbox-wrap">
+                  <input type="checkbox" id="consent" name="consent" required aria-describedby="consentError">
+                  <span class="checkbox-text">
+                    I agree to be contacted by UrbanNest Interiors about my enquiry via email, call, or WhatsApp. <span class="req-star" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <div id="consentError" class="invalid-feedback" role="alert"></div>
+              </div>
+
+              <!-- Submit Button -->
+              <div style="margin-top: 2rem;">
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+                  Request Free 30-Min Consultation
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Studio Info, Map & Weather -->
+          <div class="contact-info-panel">
+            <div class="info-box">
+              <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-primary);">
+                Studio Information
+              </h3>
+
+              <div class="info-item">
+                <div class="info-icon-wrap" aria-hidden="true">📍</div>
+                <div>
+                  <div class="info-label">Address</div>
+                  <div class="info-val">
+                    12, Lake View Road, Anna Nagar,<br>
+                    Chennai, Tamil Nadu 600040 (fictional)
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon-wrap" aria-hidden="true">📞</div>
+                <div>
+                  <div class="info-label">Phone / WhatsApp</div>
+                  <div class="info-val">
+                    <a href="tel:+919000000000" style="color: var(--color-primary); font-weight: 600;">
+                      +91 90000 00000
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon-wrap" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="info-label">Email</div>
+                  <div class="info-val">
+                    <a href="mailto:hello@urbannest-interiors.example" style="color: var(--color-primary);">
+                      hello@urbannest-interiors.example
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon-wrap" aria-hidden="true">🕒</div>
+                <div>
+                  <div class="info-label">Studio Working Hours</div>
+                  <div class="info-val">
+                    Monday – Saturday: 9:30 AM – 6:30 PM<br>
+                    <small style="color: var(--color-text-muted);">Sunday: By prior appointment only</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Open-Meteo Weather Advisory on Contact Page -->
+            <div class="weather-widget-card" id="chennaiWeatherWidget" aria-live="polite">
+              <div class="weather-loading" role="status">
+                <div class="spinner" aria-hidden="true"></div>
+                <p>Loading Chennai weather for on-site consultation planning...</p>
+              </div>
+            </div>
+
+            <!-- Google Map Embedded Location -->
+            <div class="map-container" aria-label="Interactive map showing UrbanNest Interiors in Anna Nagar Chennai">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1368943147576!2d80.20815481482315!3d13.082729990783309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526685f0b407b9%3A0xe54e19572b22bb8f!2sAnna%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                title="UrbanNest Interiors Studio Location in Anna Nagar, Chennai" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <img src="images/logo.svg" alt="UrbanNest Interiors" class="footer-logo" width="180" height="45">
+          <p>
+            UrbanNest Interiors is a premier residential and boutique commercial design studio founded in 2018. We create spaces that feel like you.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram profile" target="_blank" rel="noopener noreferrer">📷</a>
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook page" target="_blank" rel="noopener noreferrer">📘</a>
+            <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn company page" target="_blank" rel="noopener noreferrer">💼</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Our Studio</a></li>
+            <li><a href="services.html" class="footer-link">Design Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Visit</a></li>
+            <li><a href="docs/sitemap.md" class="footer-link">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+            <li><a href="services.html" class="footer-link">Modular Kitchens</a></li>
+            <li><a href="services.html" class="footer-link">Living &amp; Bedrooms</a></li>
+            <li><a href="services.html" class="footer-link">Office Interiors</a></li>
+            <li><a href="services.html" class="footer-link">3D Visualizations</a></li>
+            <li><a href="services.html" class="footer-link">Home Renovation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Address</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>12, Lake View Road, Anna Nagar, Chennai, Tamil Nadu 600040</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 90000 00000</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>hello@urbannest-interiors.example</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">🕒</span>
+            <span>Mon–Sat: 9:30 AM – 6:30 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 UrbanNest Interiors. All rights reserved. Fictional brand created for CYVEXA Level 1 Internship.
+        </div>
+        <div class="footer-credits">
+          Images via CYVEXA Asset Pack / Unsplash &amp; Pexels free licenses.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top of page">
+    &#8593;
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    // Pre-populate service dropdown if service parameter is in URL
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      if (serviceParam) {
+        const selectEl = document.getElementById('serviceInterested');
+        if (selectEl) {
+          selectEl.value = serviceParam;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
