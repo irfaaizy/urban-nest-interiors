@@ -908,6 +908,16 @@ main {
   border: 2px solid var(--color-accent);
 }
 
+.author-avatar-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 12px rgba(224, 86, 253, 0.4);
+  flex-shrink: 0;
+}
+
 .author-name {
   font-weight: 700;
   font-size: 1.1rem;
