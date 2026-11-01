@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aurora">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | UrbanNest Interiors</title>
+  <meta name="description" content="The interior space you are looking for does not exist. Return to UrbanNest Interiors homepage.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Instant Theme Initializer -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('urbannest-theme') || 'aurora';
+      if (t === 'aurora') document.documentElement.setAttribute('data-theme', 'aurora');
+    })();
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" aria-label="UrbanNest Interiors - Return to Homepage">
+        <img src="images/logo.svg" alt="UrbanNest Interiors Logo" class="logo-img" width="180" height="45">
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-icon" aria-hidden="true">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+
+      <!-- Navigation Drawer / Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle visual theme" title="Switch visual theme">
+            <span class="theme-toggle-icon" aria-hidden="true">🌌</span>
+            <span class="theme-toggle-label">Aurora Lively</span>
+          </button>
+          <a href="contact.html" class="btn btn-primary nav-cta">Book Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content: 404 Hero -->
+  <main id="main-content">
+    <section class="section" style="min-height: 65vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 5rem 1rem;">
+      <div class="container" style="max-width: 680px;">
+        <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">404 Error</span>
+        <h1 style="font-size: clamp(3rem, 7vw, 5.5rem); margin-bottom: 1rem; line-height: 1.1; background: linear-gradient(135deg, #00F5A0, #06B6D4, #E056FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Space Not Found
+        </h1>
+        <p class="section-subtitle" style="font-size: 1.2rem; margin-bottom: 2.5rem; color: var(--color-text-muted);">
+          It seems this corner of our interior haven hasn't been crafted yet. Let us guide you back to our curated living spaces, studio story, and design consultations.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html" class="btn btn-primary" style="padding: 0.85rem 2rem;">
+            ← Return to Homepage
+          </a>
+          <a href="services.html" class="btn btn-outline" style="padding: 0.85rem 2rem;">
+            Explore Services
+          </a>
+          <a href="contact.html" class="btn btn-outline" style="padding: 0.85rem 2rem;">
+            Contact Studio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo.svg" alt="UrbanNest Interiors" class="footer-logo" width="160" height="40">
+          <p class="footer-desc">
+            Spaces that feel like you. Premier residential and boutique office interior design studio in Anna Nagar, Chennai.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Design Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Full Home Interiors</a></li>
+            <li><a href="services.html" class="footer-link">Modular Kitchens</a></li>
+            <li><a href="services.html" class="footer-link">Living &amp; Bedrooms</a></li>
+            <li><a href="services.html" class="footer-link">Office Interiors</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Address</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>12, Lake View Road, Anna Nagar, Chennai, Tamil Nadu 600040</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 90000 00000</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>hello@urbannest-interiors.example</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 UrbanNest Interiors. All rights reserved. Fictional brand created for CYVEXA Level 1 Internship.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top of page">
+    &#8593;
+  </button>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

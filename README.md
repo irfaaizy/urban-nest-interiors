@@ -12,7 +12,7 @@
 * **GitHub Repository:** [https://github.com/irfaaizy/urban-nest-interiors](https://github.com/irfaaizy/urban-nest-interiors)
 * **Live GitHub Pages URL:** [https://irfaaizy.github.io/urban-nest-interiors/](https://irfaaizy.github.io/urban-nest-interiors/)
 * **Local Preview:** Run any static server (e.g. `npx serve .` or `python -m http.server 8000`)
-* **Deploy-Ready Platforms:** Netlify, GitHub Pages, Vercel, Cloudflare Pages
+* **Deploy-Ready Platforms:** Render, GitHub Pages, Netlify, Vercel, Cloudflare Pages
 * **Live Deployment Guide:** See [Deployment Instructions](#-deployment-instructions) below.
 
 ---
@@ -26,6 +26,9 @@ UrbanNest/
 ├── about.html                   # About page (Story, Animated Stats, Core Values, 4-Member Team, Gallery)
 ├── services.html                # Services page (Filter tabs, 6 Service cards, 4-Step Process, Packages, FAQ)
 ├── contact.html                 # Contact page (Validated enquiry form, Live char counter, Info, Map, Weather)
+├── 404.html                     # Custom branded 404 error page (Aurora styled with quick navigation)
+├── render.yaml                  # Render Blueprint Infrastructure-as-Code (Static Site & Security Headers)
+├── netlify.toml                 # Netlify deployment configuration & security headers
 │
 ├── css/
 │   └── style.css                # Master responsive stylesheet (Design tokens, Flexbox, Grid, Breakpoints)
@@ -179,6 +182,30 @@ Double-click `index.html` to open in any browser (Chrome, Edge, Firefox, Safari)
 ---
 
 ## 🚢 Deployment Instructions
+
+### Deploying to Render (Recommended for Free Cloud Hosting)
+
+Render provides free SSL, global CDN, and automated continuous deployments from GitHub:
+
+#### Method 1: Using Render Dashboard (Fastest, 2 Minutes)
+1. Sign in to [dashboard.render.com](https://dashboard.render.com) (Log in with GitHub).
+2. Click **New +** at the top right and select **Static Site**.
+3. Choose the repository: **`irfaaizy/urban-nest-interiors`** (click **Connect**).
+4. Fill in the deployment settings:
+   * **Name:** `urbannest-interiors`
+   * **Branch:** `main`
+   * **Root Directory:** *(leave blank)*
+   * **Build Command:** *(leave blank)*
+   * **Publish Directory:** `.`
+5. Click **Create Static Site**.
+6. Render will immediately deploy the website and assign your live URL: `https://urbannest-interiors.onrender.com`.
+
+#### Method 2: Using Render Blueprint (`render.yaml`)
+1. In your Render Dashboard, click **New +** $\rightarrow$ **Blueprint**.
+2. Select your `urban-nest-interiors` repository.
+3. Render reads `render.yaml` automatically and configures security headers (`X-Frame-Options`, `nosniff`, `Cache-Control`) and static publishing in 1 click!
+
+---
 
 ### Deploying to Netlify (Drag & Drop or CLI)
 1. **Drag and Drop:**
